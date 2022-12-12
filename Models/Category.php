@@ -1,5 +1,4 @@
 <?php
-require __DIR__ . '/Product.php';
 
 class Category
 {

@@ -6,10 +6,13 @@ class Product
 {
     public $name;
     public $price;
+    public $imagePath;
     use Weitghtable;
-    public function __construct($name, $price)
+    public function __construct($name, $price, $imagePath, Category $category)
     {
         $this->name = $name;
         $this->price = $price;
+        $this->imagePath = $imagePath;
+        $this->category = $category;
     }
 }
