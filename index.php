@@ -15,16 +15,62 @@ require __DIR__ . '/Models/Category.php';
 require __DIR__ . '/Models/ProductType.php';
 
 
-$gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/200', new Category('cane'), new ProductType('gioco'));
+$gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/500', new Category('cane'), new ProductType('gioco'));
 $gioco1->set_weight(1, 'kg');
 
-$cibo1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/200', new Category('gatto'), new ProductType('cibo'));
+$cibo1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500', new Category('gatto'), new ProductType('cibo'));
 $cibo1->set_weight(300, 'gr');
 
 
-$cuccia1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/200', new Category('cane'), new ProductType('cuccia'));
+$cuccia1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500', new Category('cane'), new ProductType('cuccia'));
 $cuccia1->set_weight(3, 'kg');
 
-var_dump($gioco1);
-var_dump($cibo1);
-var_dump($cuccia1);
+// var_dump($gioco1);
+// var_dump($cibo1);
+// var_dump($cuccia1);
+
+$productList = [$gioco1, $cibo1, $cuccia1];
+?>
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-cols-3">
+            <?php foreach ($productList as $product) : ?>
+                <div class="col">
+                    <div class="card">
+                        <img src="<?php echo $product->imagePath ?>" alt="">
+                        <div>
+                            <?php echo $product->name ?></div>
+                        <div>
+                            <?php echo $product->price ?></div>
+                        <div>
+                            <?php echo $product->category->categoryName
+                            ?>
+                        </div>
+                        <div>
+                            <?php echo $product->productType->productType
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+</body>
+
+</html>
