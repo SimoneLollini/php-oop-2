@@ -18,4 +18,13 @@ require __DIR__ . '/Models/ProductType.php';
 $gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/200', new Category('cane'), new ProductType('gioco'));
 $gioco1->set_weight(1, 'kg');
 
+$cibo1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/200', new Category('gatto'), new ProductType('cibo'));
+$cibo1->set_weight(300, 'gr');
+
+
+$cuccia1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/200', new Category('cane'), new ProductType('cuccia'));
+$cuccia1->set_weight(3, 'kg');
+
 var_dump($gioco1);
+var_dump($cibo1);
+var_dump($cuccia1);
