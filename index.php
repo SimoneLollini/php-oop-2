@@ -15,14 +15,14 @@ require __DIR__ . '/Models/Category.php';
 require __DIR__ . '/Models/ProductType.php';
 
 
-$gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/500', new Category('cane'), new ProductType('gioco'));
+$gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/500?random=1', new Category('cane'), new ProductType('gioco'));
 $gioco1->set_weight(1, 'kg');
 
-$cibo1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500', new Category('gatto'), new ProductType('cibo'));
+$cibo1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500?random=2', new Category('gatto'), new ProductType('cibo'));
 $cibo1->set_weight(300, 'gr');
 
 
-$cuccia1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500', new Category('cane'), new ProductType('cuccia'));
+$cuccia1 = new Product('Nome prodotto', 'descrizione', 'https://picsum.photos/500?random=3', new Category('cane'), new ProductType('cuccia'));
 $cuccia1->set_weight(3, 'kg');
 
 // var_dump($gioco1);
