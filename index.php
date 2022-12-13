@@ -14,7 +14,6 @@ require __DIR__ . '/Models/Product.php';
 require __DIR__ . '/Models/Category.php';
 require __DIR__ . '/Models/ProductType.php';
 
-
 $gioco1 = new Product('prodotto', 'descrizione', 'https://picsum.photos/500?random=1', new Category('cane'), new ProductType('gioco'));
 $gioco1->set_weight(1, 'kg');
 

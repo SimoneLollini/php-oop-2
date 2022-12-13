@@ -2,7 +2,6 @@
 
 trait Weitghtable
 {
-
       protected $weight;
 
       public function set_weight($weight, $unit)
